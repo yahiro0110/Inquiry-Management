@@ -1,0 +1,4 @@
+.DS_Store
+!.gitkeep
+.vscode/settings.json
+/docker/mysql/data/*
