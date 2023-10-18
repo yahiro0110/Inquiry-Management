@@ -27,7 +27,7 @@ PHP のフレームワーク Laravel で作成された Web アプリケーシ�
 2.  プロジェクトディレクトリに移動します。
 
     ```bash
-    cd　Inquiry-Management
+    cd Inquiry-Management
     ```
 
 3.  環境変数用のファイルを用意します。

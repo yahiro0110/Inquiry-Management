@@ -2,3 +2,4 @@
 !.gitkeep
 .vscode/settings.json
 /docker/mysql/data/*
+/drawio/*
