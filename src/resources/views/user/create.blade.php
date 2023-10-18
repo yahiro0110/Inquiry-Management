@@ -9,7 +9,7 @@
         <div class="contact-form__heading">
             <h2>お問い合わせ</h2>
         </div>
-        <form class="form" action="contacts/confirm" method="post">
+        <form class="form" action="{{ route('contact.confirm') }}" method="POST">
             @csrf
             {{-- 入力フィールド（お名前） --}}
             <div class="form__group">
@@ -41,11 +41,11 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--radio">
-                        <input type="radio" class="radio-input" id="male" name="gender"
-                            value="{{ old('male') }}" />
+                        <input type="radio" class="radio-input" id="male" name="gender" value="male"
+                            {{ old('gender') == 'male' ? 'checked' : '' }} />
                         <label for="male">男性</label>
-                        <input type="radio" class="radio-input" id="female" name="gender"
-                            value="{{ old('female') }}" />
+                        <input type="radio" class="radio-input" id="female" name="gender" value="female"
+                            {{ old('gender') == 'female' ? 'checked' : '' }} />
                         <label for="female">女性</label>
                     </div>
                     <div class="form__error">
@@ -87,7 +87,8 @@
                     </div>
                     <div class="form__input--postal">
                         <div class="form__input--postal">
-                            <input type="text" name="postal" value="{{ old('postal') }}" />
+                            <input type="text" name="postal" size="8" maxlength="8"
+                                value="{{ old('postal') }}" />
                         </div>
                         <div class="form__input--postal">
                             <label for="postal">例）123-4567</label>
@@ -120,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            {{-- 入力フィールド（建物） --}}
+            {{-- 入力フィールド（建物名） --}}
             <div class="form__group">
                 <div class="form__group-title">
                     <span class="form__label--item">建物名</span>
@@ -147,7 +148,7 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--textarea">
-                        <textarea name="opinion">{{ old('content') }}</textarea>
+                        <textarea name="opinion">{{ old('opinion') }}</textarea>
                     </div>
                     <div class="form__error">
                         @error('opinion')
