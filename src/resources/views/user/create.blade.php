@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="form__button">
-                <button id="submitButton" class="form__button-submit" type="submit">送信</button>
+                <button id="submitButton" class="form__button-submit" type="submit">確認</button>
             </div>
         </form>
     </div>
