@@ -9,7 +9,8 @@
         <div class="contact-form__heading">
             <h2>お問い合わせ</h2>
         </div>
-        <form class="form" action="{{ route('contact.post') }}" method="POST">
+        <form class="form h-adr" action="{{ route('contact.post') }}" method="POST">
+            <span class="p-country-name" style="display:none;">Japan</span>
             @csrf
             {{-- 入力フィールド（お名前） --}}
             <div class="form__group">
@@ -87,7 +88,7 @@
                     </div>
                     <div class="form__input--postal">
                         <div class="form__input--postal">
-                            <input type="text" name="postal" size="8" maxlength="8"
+                            <input type="text" class="p-postal-code" name="postal" size="8" maxlength="8"
                                 value="{{ old('postal') }}" />
                         </div>
                         <div class="form__input--postal">
@@ -109,7 +110,8 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="text" name="address" value="{{ old('address') }}" />
+                        <input type="text" class="p-region p-locality p-street-address p-extended-address" name="address"
+                            value="{{ old('address') }}" />
                     </div>
                     <div class="form__input--text">
                         <label for="address">例）東京都渋谷区千駄ヶ谷1-2-3</label>
@@ -162,4 +164,5 @@
             </div>
         </form>
     </div>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 @endsection
