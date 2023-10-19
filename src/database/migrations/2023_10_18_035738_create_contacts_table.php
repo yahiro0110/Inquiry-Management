@@ -18,7 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('fullname', 255);
             $table->tinyInteger('gender')->unsigned();
             $table->string('email', 255);
-            $table->char('postcode', 8);
+            $table->char('postal', 8);
             $table->string('address', 255);
             $table->string('building_name', 255)->nullable();
             $table->text('opinion');
