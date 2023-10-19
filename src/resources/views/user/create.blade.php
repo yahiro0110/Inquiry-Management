@@ -27,10 +27,17 @@
                         <label for="first_name">例）山田</label>
                         <label for="last_name">例）太郎</label>
                     </div>
-                    <div class="form__error">
-                        @error('name')
-                            {{ $message }}
-                        @enderror
+                    <div class="form__input--name">
+                        <div class="form__error error_name">
+                            @error('first_name')
+                                {{ $message }}
+                            @enderror
+                        </div>
+                        <div class="form__error error_name">
+                            @error('last_name')
+                                {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,11 +101,11 @@
                         <div class="form__input--postal">
                             <label for="postal">例）123-4567</label>
                         </div>
-                    </div>
-                    <div class="form__error">
-                        @error('postal')
-                            {{ $message }}
-                        @enderror
+                        <div class="form__error">
+                            @error('postal')
+                                {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
             </div>

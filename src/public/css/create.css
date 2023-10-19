@@ -32,10 +32,15 @@
     color: #ff0000;
 }
 
-.form__error::after {
+.form__error {
     height: 20px;
     color: #ff0000;
     text-align: left;
+    font-size: 13px;
+}
+
+.error_name {
+    width: 290px;
 }
 
 .form__group-content--postal {

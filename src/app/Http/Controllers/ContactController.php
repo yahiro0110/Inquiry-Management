@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -35,8 +36,7 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // TODO: 後でフォームリクエストに変更する
-    public function post(Request $request)
+    public function post(ContactRequest $request)
     {
         $input = $request->only($this->formItems);
         $request->session()->put('form_input', $input);
@@ -49,7 +49,6 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // TODO: 後でフォームリクエストに変更する
     public function confirm(Request $request)
     {
         $input = $request->session()->get('form_input');
