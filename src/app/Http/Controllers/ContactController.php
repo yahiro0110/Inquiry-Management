@@ -93,7 +93,7 @@ class ContactController extends Controller
         // セッション情報の削除
         $request->session()->forget('form_input');
 
-        return redirect()->route('contact.create');
+        return view('user.thanks');
     }
 
     /**
