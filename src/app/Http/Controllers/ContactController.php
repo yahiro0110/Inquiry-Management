@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     private $formItems = ['first_name', 'last_name', 'gender', 'email', 'postal', 'address', 'building_name', 'opinion'];
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +26,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('user/create');
+        return view('user.create');
     }
 
     /**
@@ -55,17 +56,21 @@ class ContactController extends Controller
         if (!$input) {
             return redirect()->route('contact.create');
         }
-        return view('user/confirm', ['contact' => $input]);
+        return view('user.confirm', ['contact' => $input]);
     }
 
     /**
      * お問い合わせ入力画面へ戻る
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function back(Request $request)
     {
         $input = $request->session()->get('form_input');
+        if (!$input) {
+            return redirect()->route('contact.create');
+        }
         return redirect()->route('contact.create')->withInput($input);
     }
 
