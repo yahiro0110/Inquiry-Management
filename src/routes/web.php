@@ -22,4 +22,8 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/new', [ContactController::class, 'create'])->name('contact.create');
+Route::get('/create', [ContactController::class, 'create'])->name('contact.create');
+Route::post('/create', [ContactController::class, 'post'])->name('contact.post');
+Route::get('/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
+Route::get('/back', [ContactController::class, 'back'])->name('contact.back');
+Route::post('/confirm', [ContactController::class, 'store'])->name('contact.store');
