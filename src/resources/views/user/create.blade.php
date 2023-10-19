@@ -71,12 +71,13 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="email" name="email" value="{{ old('email') }}" />
+                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                            oninput="validateForm()" />
                     </div>
                     <div class="form__input--text">
                         <label for="email">例）test@example.com</label>
                     </div>
-                    <div class="form__error">
+                    <div id="emailError" class="form__error">
                         @error('email')
                             {{ $message }}
                         @enderror
@@ -95,13 +96,13 @@
                     </div>
                     <div class="form__input--postal">
                         <div class="form__input--postal">
-                            <input type="text" class="p-postal-code" name="postal" size="8" maxlength="8"
-                                value="{{ old('postal') }}" />
+                            <input type="text" id="postal" class="p-postal-code" name="postal" size="8"
+                                maxlength="8" value="{{ old('postal') }}" oninput="validateForm()" />
                         </div>
                         <div class="form__input--postal">
                             <label for="postal">例）123-4567</label>
                         </div>
-                        <div class="form__error">
+                        <div id="postalError" class="form__error">
                             @error('postal')
                                 {{ $message }}
                             @enderror
@@ -167,9 +168,10 @@
                 </div>
             </div>
             <div class="form__button">
-                <button class="form__button-submit" type="submit">送信</button>
+                <button id="submitButton" class="form__button-submit" type="submit">送信</button>
             </div>
         </form>
     </div>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <script src="{{ asset('js/inputValidation.js') }}"></script>
 @endsection
