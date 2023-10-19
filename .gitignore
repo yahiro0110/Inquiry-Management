@@ -3,3 +3,5 @@
 .vscode/settings.json
 /docker/mysql/data/*
 /drawio/*
+src/resources/views/test.blade.php
+src/public/css/thank.css
