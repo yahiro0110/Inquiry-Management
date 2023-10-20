@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('top');
+})->name('contact.top');
 
 Route::get('/test', function () {
     return view('test');
