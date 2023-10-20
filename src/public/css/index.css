@@ -1,0 +1,64 @@
+.contact-list__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-list__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* テーブルを水平中央に配置 */
+    align-items: center;
+}
+
+.contact-table {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse; /* セルの境界線を結合 */
+}
+
+.contact-table th.contact-table__id,
+.contact-table td.contact-table__id {
+    text-align: center;
+    width: 80px;
+}
+
+.contact-table th,
+.contact-table td {
+    border: none; /* すべての境界線を非表示 */
+    padding: 15px;
+    text-align: left;
+}
+
+.contact-table th {
+    border-bottom: 1px solid #000; /* ヘッダーセルの下側に境界線を表示 */
+}
+
+.contact-table td {
+    white-space: nowrap; /* テキストの折り返しを無効にする */
+}
+
+/* ご意見を省略するためのスタイル */
+.contact-table__opnion {
+    max-width: 330px; /* 最大幅を設定 */
+    white-space: nowrap; /* テキストの折り返しを無効に */
+    overflow: hidden;
+    text-overflow: ellipsis; /* テキストがはみ出た場合に省略記号(...)を表示 */
+}
+
+.btn {
+    padding: 10px;
+    width: 20%;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}

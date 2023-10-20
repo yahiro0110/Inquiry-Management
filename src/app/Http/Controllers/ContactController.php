@@ -11,13 +11,14 @@ class ContactController extends Controller
     private $formItems = ['first_name', 'last_name', 'gender', 'email', 'postal', 'address', 'building_name', 'opinion'];
 
     /**
-     * Display a listing of the resource.
+     * お問い合わせ一覧画面を表示する
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $contacts = Contact::all();
+        return view('admin.index', ['contacts' => $contacts]);
     }
 
     /**

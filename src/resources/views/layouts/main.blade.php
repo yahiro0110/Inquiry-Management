@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">
+            <a class="header__logo" href="{{ route('contact.create') }}">
                 Contact Form
             </a>
         </div>
