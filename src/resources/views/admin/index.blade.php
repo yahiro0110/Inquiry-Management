@@ -7,7 +7,7 @@
 @section('content')
     <div class="contact__alert">
         @if (session('message'))
-            <div class="contact__alert-success" id="success-alert">
+            <div class="contact__alert-success">
                 {{ session('message') }}
             </div>
         @endif
