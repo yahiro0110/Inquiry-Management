@@ -22,6 +22,15 @@
                 検索キーワードに一致する記事が見つかりません
             </div>
         @else
+            <div class="contact__page">
+                <div class="contact__page-range">
+                    全{{ $contacts->total() }}件中
+                    {{ $contacts->firstItem() }}〜{{ $contacts->lastItem() }} 件
+                </div>
+                <div class="contact__page-nav">
+                    {{ $contacts->links('vendor.pagination.custom') }}
+                </div>
+            </div>
             <div class="contact__table">
                 <table class="contact__table-container">
                     <tr>
