@@ -14,14 +14,12 @@
                             <span class="form__label--item">性別</span>
                         </div>
                         <div class="form__input--radio">
-                            <input type="radio" class="radio-input" id="male" name="gender" value="male"
-                                {{ old('gender') == 'male' ? 'checked' : '' }} checked />
-                            <label for="male">全て</label>
-                            <input type="radio" class="radio-input" id="male" name="gender" value="male"
-                                {{ old('gender') == 'male' ? 'checked' : '' }} />
+                            <input type="radio" class="radio-input" id="all" name="gender" value="all"
+                                checked />
+                            <label for="all">全て</label>
+                            <input type="radio" class="radio-input" id="male" name="gender" value="male" />
                             <label for="male">男性</label>
-                            <input type="radio" class="radio-input" id="female" name="gender" value="female"
-                                {{ old('gender') == 'female' ? 'checked' : '' }} />
+                            <input type="radio" class="radio-input" id="female" name="gender" value="female" />
                             <label for="female">女性</label>
                         </div>
                     </div>
