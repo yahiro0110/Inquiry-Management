@@ -1,5 +1,5 @@
 <div class="form-container">
-    <form class="form" action="{{ route('contact.post') }}" method="GET">
+    <form class="form" method="GET">
         @csrf
         {{-- 入力フィールド（お名前） --}}
         <div class="form__group">
@@ -8,7 +8,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input-area">
-                    <input type="text" name="first_name" />
+                    <input type="text" name="fullname" />
                     <div class="form__group">
                         <div class="form__group-title">
                             <span class="form__label--item">性別</span>
@@ -46,13 +46,13 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="email" id="email" name="email" />
+                    <input type="text" name="email" />
                 </div>
             </div>
         </div>
         <div class="form__button">
-            <button id="submitButton" class="form__button-submit" type="submit">検索</button>
-            <a href="{{ route('contact.back') }}">リセット</a>
+            <button class="form__button-submit" type="submit">検索</button>
+            <a href="{{ route('contact.index') }}">リセット</a>
         </div>
     </form>
 </div>
