@@ -136,13 +136,14 @@ class ContactController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Contactsテーブルからレコードを削除する
      *
-     * @param  \App\Models\Contact  $contact
+     * @param int $id 連絡先ID
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-        //
+        Contact::find($id)->delete();
+        return redirect()->route('contact.index')->with('message', 'Data deleted successfully');
     }
 }

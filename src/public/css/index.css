@@ -1,64 +1,80 @@
-.contact-list__content {
+.contact__content {
     margin: 0 auto;
     padding: 30px 15px;
     max-width: 1230px;
 }
 
-.contact-list__heading {
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.contact__alert-success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    animation: fadeOut 8s;
+    animation-fill-mode: forwards; /* アニメーション終了後も最終フレームを維持 */
+}
+
+.contact__heading {
     margin-bottom: 40px;
     text-align: center;
 }
 
-.table-container {
+.contact__table {
     display: flex;
     justify-content: center; /* テーブルを水平中央に配置 */
     align-items: center;
 }
 
-.contact-table {
+.contact__table-container {
     margin: 0;
     width: 100%;
     border-collapse: collapse; /* セルの境界線を結合 */
 }
 
-.contact-table th.contact-table__id,
-.contact-table td.contact-table__id {
+.contact__table-container th.contact__table-id,
+.contact__table-container td.contact__table-id {
     text-align: center;
     width: 80px;
 }
 
-.contact-table th,
-.contact-table td {
+.contact__table-container th,
+.contact__table-container td {
     border: none; /* すべての境界線を非表示 */
     padding: 15px;
     text-align: left;
 }
 
-.contact-table th {
+.contact__table-container th {
     border-bottom: 1px solid #000; /* ヘッダーセルの下側に境界線を表示 */
 }
 
-.contact-table td {
+.contact__table-container td {
     white-space: nowrap; /* テキストの折り返しを無効にする */
 }
 
 /* ご意見を省略するためのスタイル */
-.contact-table__opnion {
-    max-width: 330px; /* 最大幅を設定 */
+.contact__table-opinion {
+    max-width: 340px; /* 最大幅を設定 */
     white-space: nowrap; /* テキストの折り返しを無効に */
     overflow: hidden;
     text-overflow: ellipsis; /* テキストがはみ出た場合に省略記号(...)を表示 */
 }
 
-.btn {
-    padding: 10px;
-    width: 20%;
+.contact__table-btn {
+    padding: 0px 15px 0px 15px;
     border: none;
     border-radius: 3px;
     background: #000;
     color: #fff;
     cursor: pointer;
-    text-align: center;
-    text-decoration: none;
     font-size: 14px;
 }
