@@ -44,13 +44,13 @@
                     @foreach ($contacts as $contact)
                         <tr>
                             <td class="contact__table-id">{{ $contact->id }}</td>
-                            <td>{{ $contact->fullname }}</td>
+                            <td class="contact__table-name">{{ $contact->fullname }}</td>
                             @if ($contact->gender === 1)
                                 <td>男性</td>
                             @else
                                 <td>女性</td>
                             @endif
-                            <td>{{ $contact->email }}</td>
+                            <td class="contact__table-email">{{ $contact->email }}</td>
                             <td class="contact__table-opinion">{{ $contact->opinion }}</td>
                             <td>
                                 <form action="{{ route('contact.destroy', ['id' => $contact->id]) }}" method="POST">

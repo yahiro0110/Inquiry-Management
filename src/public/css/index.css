@@ -96,6 +96,14 @@
     width: 80px;
 }
 
+.contact__table-container td.contact__table-name {
+    width: 200px;
+}
+
+.contact__table-container td.contact__table-email {
+    width: 250px;
+}
+
 .contact__table-container th,
 .contact__table-container td {
     border: none; /* すべての境界線を非表示 */
