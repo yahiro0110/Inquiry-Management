@@ -11,13 +11,47 @@ class ContactController extends Controller
     private $formItems = ['first_name', 'last_name', 'gender', 'email', 'postal', 'address', 'building_name', 'opinion'];
 
     /**
-     * Display a listing of the resource.
+     * お問い合わせ一覧画面を表示する
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        // フォームからのリクエストデータを取得
+        $fullname = $request->input('fullname');
+        if ($request->input('gender') == 'male') {
+            $gender = 1;
+        } elseif ($request->input('gender') == 'female') {
+            $gender = 2;
+        }
+        $firstDate = $request->input('first_date');
+        $lastDate = $request->input('last_date');
+        $email = $request->input('email');
+
+        // クエリを初期化
+        $query = Contact::query();
+
+        // 各条件をクエリに追加
+        if (!empty($fullname)) {
+            $query->where('fullname', 'LIKE', "%$fullname%");
+        }
+        if (!empty($gender)) {
+            $query->where('gender', $gender);
+        }
+        if (!empty($firstDate)) {
+            $query->whereDate('created_at', '>=', $firstDate);
+        }
+        if (!empty($lastDate)) {
+            $query->whereDate('created_at', '<=', $lastDate);
+        }
+        if (!empty($email)) {
+            $query->where('email', 'LIKE', "%$email%");
+        }
+
+        // クエリを実行
+        $results = $query->Paginate(10);
+
+        return view('admin.index', ['contacts' => $results]);
     }
 
     /**
@@ -135,13 +169,14 @@ class ContactController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Contactsテーブルからレコードを削除する
      *
-     * @param  \App\Models\Contact  $contact
+     * @param int $id 連絡先ID
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-        //
+        Contact::find($id)->delete();
+        return redirect()->route('contact.index')->with('message', 'Data deleted successfully');
     }
 }
