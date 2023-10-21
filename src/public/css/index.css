@@ -1,0 +1,315 @@
+body {
+    overflow: scroll; /* スクロールバーの表示・非表示でレイアウトのガタつきを防止  */
+}
+
+.contact__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.contact__alert-success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    animation: fadeOut 8s;
+    animation-fill-mode: forwards; /* アニメーション終了後も最終フレームを維持 */
+    position: absolute; /* 絶対位置指定 */
+    top: 76px; /* 他のコンテンツの上に配置 */
+    left: 0; /* 他のコンテンツの左に配置 */
+    width: 100%; /* 横幅を親要素いっぱいに */
+}
+
+.contact__alert-error p {
+    padding: 10px 30px;
+    border-color: #dbbaba;
+    background-color: #e7d1d1;
+    color: #510f0f;
+    text-align: center;
+}
+.contact__alert-error img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.contact__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact__page {
+    display: flex; /* アイテムを横に配置 */
+    justify-content: space-between; /* アイテムを均等に配置 */
+    align-items: center; /* 垂直方向の中央寄せ */
+    padding: 10px;
+    height: 50px;
+}
+
+.contact__page-range {
+    flex: 1; /* 余ったスペースを均等に分配 */
+    padding: 10px;
+    font-size: 14px;
+}
+
+.contact__page-nav {
+    display: flex; /* アイテムを横に配置 */
+    align-items: center; /* 垂直方向の中央寄せ */
+    margin: 0;
+    font-size: 14px;
+}
+
+.contact__page-nav ul {
+    list-style: none; /* リストスタイルを無効にする */
+    padding: 0; /* リストの内側の余白をゼロにする */
+    display: flex; /* フレックスコンテナを使用してアイテムを横に配置 */
+    justify-content: space-between; /* アイテムを均等に配置 */
+    flex-grow: 1; /* 残りのスペースを均等に分配 */
+}
+
+.contact__page-nav li {
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #ccc; /* 外枠の線を表示 */
+    margin-right: -1px; /* 重なる部分が太くなるのを解消 */
+}
+
+.contact__page-nav li a {
+    text-decoration: none; /* 下線を削除 */
+    color: black; /* リンクの文字色を変更 */
+}
+
+.contact__page-nav li.active {
+    background-color: black; /* 背景色を黒に */
+    color: white; /* 文字色を白に */
+    border: none; /* 下線を削除 */
+}
+
+.contact__table {
+    display: flex;
+    justify-content: center; /* テーブルを水平中央に配置 */
+    align-items: center;
+}
+
+.contact__table-container {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse; /* セルの境界線を結合 */
+}
+
+.contact__table-container th.contact__table-id,
+.contact__table-container td.contact__table-id {
+    text-align: center;
+    width: 80px;
+}
+
+.contact__table-container td.contact__table-name {
+    width: 150px;
+}
+
+.contact__table-container td.contact__table-email {
+    width: 300px;
+}
+
+.contact__table-container th,
+.contact__table-container td {
+    border: none; /* すべての境界線を非表示 */
+    padding: 15px;
+    text-align: left;
+}
+
+.contact__table-container th {
+    border-bottom: 1px solid #000; /* ヘッダーセルの下側に境界線を表示 */
+}
+
+.contact__table-container td {
+    white-space: normal;
+}
+
+/* ご意見を省略するためのスタイル */
+.contact__table-opinion {
+    max-width: 340px; /* 最大幅を設定 */
+}
+
+.contact__table-btn {
+    padding: 0px 15px 0px 15px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*--------------------------------------------------
+検索フォーム用
+--------------------------------------------------*/
+.form {
+    margin: 0 auto;
+    padding: 30px;
+    width: 80%;
+    text-align: center;
+    border: 1px solid #000; /* ヘッダーセルの下側に境界線を表示 */
+}
+
+.form-container {
+    height: 400px;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__group-title {
+    padding-top: 10px;
+}
+
+.form__group-content {
+    width: 750px;
+}
+
+.form__input-area {
+    display: flex;
+    gap: 25px;
+    height: 50px;
+}
+
+.form__input-date {
+    display: flex;
+    gap: 20px;
+    height: 50px;
+}
+
+.form__input-date input,
+.form__input-area input {
+    padding: 10px;
+    width: 290px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+    height: 40px;
+}
+
+.form__input-date span {
+    padding: 10px 0px 10px 0px;
+    font-size: 80%;
+}
+
+.form__input--radio {
+    padding: 10px 10px 10px 30px;
+    text-align: left; /* テキストを右寄せ */
+    margin: 0;
+}
+
+.form__input--radio label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-right: 10px;
+}
+
+.form__input--radio label::before,
+.form__input--radio label::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.form__input--radio label::before {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    left: 5px;
+}
+
+.form__input--radio label::after {
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    left: 13px;
+}
+
+.form__input--radio input:checked + label::after {
+    opacity: 1;
+}
+
+/* ラジオボタンを非表示にするスタイル */
+.radio-input {
+    position: absolute;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+}
+
+.form__input--text {
+    display: flex;
+    height: 50px;
+}
+
+.form__input--text input {
+    padding: 10px;
+    width: 290px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--text label {
+    padding: 10px;
+    width: 600px;
+    text-align: left; /* テキストを右寄せ */
+    color: darkgrey;
+}
+
+.form__button {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__button a {
+    color: black;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 15%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}

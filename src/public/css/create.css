@@ -1,0 +1,201 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__group-title {
+    padding-top: 10px;
+}
+
+.form__label--required {
+    margin-left: 5px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: #ff0000;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+    font-size: 13px;
+}
+
+.error_name {
+    width: 290px;
+}
+
+.form__group-content--postal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input--name {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form__input--name input {
+    padding: 10px;
+    width: 290px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--name label {
+    padding: 10px;
+    width: 290px;
+    text-align: left; /* テキストを右寄せ */
+    color: darkgrey;
+}
+
+.form__input--radio {
+    padding: 10px 10px 10px 0;
+    width: 600px;
+    text-align: left; /* テキストを右寄せ */
+}
+
+.form__input--radio label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-right: 10px;
+}
+
+.form__input--radio label::before,
+.form__input--radio label::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.form__input--radio label::before {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    left: 5px;
+}
+
+.form__input--radio label::after {
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    left: 13px;
+}
+
+.form__input--radio input:checked + label::after {
+    opacity: 1;
+}
+
+/* ラジオボタンを非表示にするスタイル */
+.radio-input {
+    position: absolute;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+}
+
+.form__input--postal {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input--postal input {
+    padding: 10px;
+    width: 570px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+    height: 40px;
+}
+
+.form__input--postal label {
+    padding: 10px;
+    width: 570px;
+    text-align: left; /* テキストを右寄せ */
+    color: darkgrey;
+}
+
+.form__input--postal span {
+    font-size: 80%;
+    padding: 10px;
+}
+
+.form__input--text {
+    display: flex;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__input--text label {
+    padding: 10px;
+    width: 600px;
+    text-align: left; /* テキストを右寄せ */
+    color: darkgrey;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}

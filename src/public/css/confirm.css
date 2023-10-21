@@ -1,0 +1,72 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__group-title {
+    padding-top: 10px;
+}
+
+/* 入力フォームで入力された値の表示用
+----------------------------------------*/
+.form__input--text {
+    display: flex;
+}
+
+.form__input--text p,
+.form__input--textarea p {
+    margin: 0;
+    padding: 10px;
+    width: 600px;
+    text-align: left;
+
+    appearance: none;
+}
+
+.form__input--text p {
+    height: 40px;
+}
+
+.form__input--textarea p {
+    height: 180px;
+}
+
+.form__button {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__button a {
+    color: black;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
