@@ -18,10 +18,6 @@ Route::get('/', function () {
     return view('top');
 })->name('contact.top');
 
-Route::get('/test', function () {
-    return view('test');
-});
-
 Route::get('/create', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/create', [ContactController::class, 'post'])->name('contact.post');
 Route::get('/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
