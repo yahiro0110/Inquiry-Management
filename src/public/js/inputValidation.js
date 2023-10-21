@@ -80,7 +80,7 @@ function validatePostal(postal) {
         return validateInfo; // 郵便番号が空白の場合は有効
     }
 
-    const postalPattern = /^\d{3}-\d{4}$/;
+    const postalPattern = /^[\d０-９]{3}[-−ー][\d０-９]{4}$/;
     validateInfo.isValid = postalPattern.test(postalValue);
     return validateInfo;
 }

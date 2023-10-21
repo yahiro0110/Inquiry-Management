@@ -76,6 +76,8 @@ class ContactController extends Controller
     public function post(ContactRequest $request)
     {
         $input = $request->only($this->formItems);
+        // 郵便番号の値を半角に変換する
+        $input['postal'] = mb_convert_kana($input['postal'], 'an');
         $request->session()->put('form_input', $input);
         return redirect()->route('contact.confirm');
     }
