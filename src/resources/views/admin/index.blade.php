@@ -66,4 +66,5 @@
             </div>
         @endif
     </div>
+    <script src="{{ asset('js/textEllipsis.js') }}"></script>
 @endsection

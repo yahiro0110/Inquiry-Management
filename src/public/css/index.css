@@ -116,15 +116,12 @@
 }
 
 .contact__table-container td {
-    white-space: nowrap; /* テキストの折り返しを無効にする */
+    white-space: normal;
 }
 
 /* ご意見を省略するためのスタイル */
 .contact__table-opinion {
     max-width: 340px; /* 最大幅を設定 */
-    white-space: nowrap; /* テキストの折り返しを無効に */
-    overflow: hidden;
-    text-overflow: ellipsis; /* テキストがはみ出た場合に省略記号(...)を表示 */
 }
 
 .contact__table-btn {
