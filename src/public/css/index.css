@@ -31,6 +31,19 @@ body {
     width: 100%; /* 横幅を親要素いっぱいに */
 }
 
+.contact__alert-error p {
+    padding: 10px 30px;
+    border-color: #dbbaba;
+    background-color: #e7d1d1;
+    color: #510f0f;
+    text-align: center;
+}
+.contact__alert-error img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
 .contact__heading {
     margin-bottom: 40px;
     text-align: center;

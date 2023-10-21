@@ -19,8 +19,9 @@
         @include('admin.search')
         {{-- 一覧表示エリア --}}
         @if ($contacts->isEmpty())
-            <div class="alert alert-danger">
-                検索キーワードに一致する記事が見つかりません
+            <div class="contact__alert-error">
+                <p>検索キーワードに一致するデータは見つかりませんでした</p>
+                <img src="{{ asset('img/not-found.png') }}" alt="">
             </div>
         @else
             <div class="contact__page">
