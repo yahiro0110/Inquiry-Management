@@ -49,7 +49,10 @@ class ContactController extends Controller
         }
 
         // クエリを実行
-        $results = $query->Paginate(10);
+        $results = $query->paginate(10);
+
+        // クエリパラメータをページネーションリンクに含める
+        $results->appends($request->all());
 
         return view('admin.index', ['contacts' => $results]);
     }
