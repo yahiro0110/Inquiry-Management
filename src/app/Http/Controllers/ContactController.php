@@ -126,7 +126,7 @@ class ContactController extends Controller
         }
 
         // レコード登録用に氏名のデータを加工
-        $input['fullname'] = $input['first_name'] . ' ' . $input['last_name'];
+        $input['fullname'] = $input['first_name'] . $input['last_name'];
         unset($input['first_name'], $input['last_name']);
         // レコード登録用に性別のデータを加工
         $input['gender'] = ($input['gender'] == 'male') ? 1 : 2;
