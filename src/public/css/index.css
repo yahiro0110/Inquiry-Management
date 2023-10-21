@@ -1,3 +1,7 @@
+body {
+    overflow: scroll; /* スクロールバーの表示・非表示でレイアウトのガタつきを防止  */
+}
+
 .contact__content {
     margin: 0 auto;
     padding: 30px 15px;
@@ -97,11 +101,11 @@
 }
 
 .contact__table-container td.contact__table-name {
-    width: 200px;
+    width: 150px;
 }
 
 .contact__table-container td.contact__table-email {
-    width: 250px;
+    width: 300px;
 }
 
 .contact__table-container th,
