@@ -16,6 +16,7 @@
         <div class="contact__heading">
             <h2>管理システム</h2>
         </div>
+        {{-- 検索フォーム --}}
         @include('admin.search')
         {{-- 一覧表示エリア --}}
         @if ($contacts->isEmpty())
