@@ -4,11 +4,17 @@
     max-width: 1230px;
 }
 
+/*--------------------------------------------------
+タイトル
+--------------------------------------------------*/
 .contact-form__heading {
     margin-bottom: 40px;
     text-align: center;
 }
 
+/*--------------------------------------------------
+確認フォーム
+--------------------------------------------------*/
 .form {
     margin: 0 auto;
     width: 70%;
@@ -25,14 +31,14 @@
     padding-top: 10px;
 }
 
-/* 入力フォームで入力された値の表示用
+/* 入力フォームで入力された項目表示
 ----------------------------------------*/
-.form__input--text {
+.form__input-text {
     display: flex;
 }
 
-.form__input--text p,
-.form__input--textarea p {
+.form__input-text p,
+.form__input-textarea p {
     margin: 0;
     padding: 10px;
     width: 600px;
@@ -41,14 +47,16 @@
     appearance: none;
 }
 
-.form__input--text p {
+.form__input-text p {
     height: 40px;
 }
 
-.form__input--textarea p {
+.form__input-textarea p {
     height: 180px;
 }
 
+/* フォームボタン、修正リンク
+----------------------------------------*/
 .form__button {
     margin-top: 30px;
     display: flex;

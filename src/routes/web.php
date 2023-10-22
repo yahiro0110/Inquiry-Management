@@ -14,19 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// トップページ
 Route::get('/', function () {
     return view('top');
 })->name('contact.top');
 
-Route::get('/test', function () {
-    return view('test');
-});
-
+// お問い合わせ入力画面
 Route::get('/create', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/create', [ContactController::class, 'post'])->name('contact.post');
 Route::get('/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
 Route::post('/confirm', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/back', [ContactController::class, 'back'])->name('contact.back');
 
+// お問い合わせ一覧画面
 Route::get('/index', [ContactController::class, 'index'])->name('contact.index');
 Route::delete('/index/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');

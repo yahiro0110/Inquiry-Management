@@ -2,9 +2,8 @@
 !.gitkeep
 .vscode/settings.json
 /docker/mysql/data/*
-/drawio/*
 src/resources/views/test.blade.php
-src/public/css/thank.css
+src/public/css/test.css
 src/resources/views/vendor/pagination/bootstrap-4.blade.php
 src/resources/views/vendor/pagination/default.blade.php
 src/resources/views/vendor/pagination/semantic-ui.blade.php
@@ -12,4 +11,4 @@ src/resources/views/vendor/pagination/simple-bootstrap-4.blade.php
 src/resources/views/vendor/pagination/simple-default.blade.php
 src/resources/views/vendor/pagination/simple-tailwind.blade.php
 src/resources/views/vendor/pagination/tailwind.blade.php
-src/public/css/test.css
+

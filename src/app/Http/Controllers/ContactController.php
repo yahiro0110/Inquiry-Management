@@ -8,22 +8,20 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+    // 入力フォームの項目
     private $formItems = ['first_name', 'last_name', 'gender', 'email', 'postal', 'address', 'building_name', 'opinion'];
 
     /**
      * お問い合わせ一覧画面を表示する
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
-        // フォームからのリクエストデータを取得
+        // 検索フォームからのリクエストデータを取得
         $fullname = $request->input('fullname');
-        if ($request->input('gender') == 'male') {
-            $gender = 1;
-        } elseif ($request->input('gender') == 'female') {
-            $gender = 2;
-        }
+        $gender = $request->input('gender');
         $firstDate = $request->input('first_date');
         $lastDate = $request->input('last_date');
         $email = $request->input('email');
@@ -36,7 +34,11 @@ class ContactController extends Controller
             $query->where('fullname', 'LIKE', "%$fullname%");
         }
         if (!empty($gender)) {
-            $query->where('gender', $gender);
+            if ($gender === 'male') {
+                $query->where('gender', 1);
+            } elseif ($gender === 'female') {
+                $query->where('gender', 2);
+            }
         }
         if (!empty($firstDate)) {
             $query->whereDate('created_at', '>=', $firstDate);

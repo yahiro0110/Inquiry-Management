@@ -8,6 +8,9 @@ body {
     max-width: 1230px;
 }
 
+/*--------------------------------------------------
+削除実行後のメッセージエリア
+--------------------------------------------------*/
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -31,6 +34,9 @@ body {
     width: 100%; /* 横幅を親要素いっぱいに */
 }
 
+/*--------------------------------------------------
+検索でヒットしなかった場合の表示エリア
+--------------------------------------------------*/
 .contact__alert-error p {
     padding: 10px 30px;
     border-color: #dbbaba;
@@ -44,11 +50,17 @@ body {
     padding-top: 100px;
 }
 
+/*--------------------------------------------------
+タイトル
+--------------------------------------------------*/
 .contact__heading {
     margin-bottom: 40px;
     text-align: center;
 }
 
+/*--------------------------------------------------
+ページネーション
+--------------------------------------------------*/
 .contact__page {
     display: flex; /* アイテムを横に配置 */
     justify-content: space-between; /* アイテムを均等に配置 */
@@ -95,6 +107,9 @@ body {
     border: none; /* 下線を削除 */
 }
 
+/*--------------------------------------------------
+一覧エリア
+--------------------------------------------------*/
 .contact__table {
     display: flex;
     justify-content: center; /* テーブルを水平中央に配置 */
@@ -107,20 +122,44 @@ body {
     border-collapse: collapse; /* セルの境界線を結合 */
 }
 
+/* ID
+----------------------------------------*/
 .contact__table-container th.contact__table-id,
 .contact__table-container td.contact__table-id {
     text-align: center;
     width: 80px;
 }
 
+/* お名前
+----------------------------------------*/
 .contact__table-container td.contact__table-name {
     width: 150px;
 }
 
+/* メールアドレス
+----------------------------------------*/
 .contact__table-container td.contact__table-email {
     width: 300px;
 }
 
+/* ご意見
+----------------------------------------*/
+.contact__table-opinion {
+    max-width: 340px; /* 最大幅を設定 */
+}
+
+.contact__table-btn {
+    padding: 0px 15px 0px 15px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* その他
+----------------------------------------*/
 .contact__table-container th,
 .contact__table-container td {
     border: none; /* すべての境界線を非表示 */
@@ -136,23 +175,8 @@ body {
     white-space: normal;
 }
 
-/* ご意見を省略するためのスタイル */
-.contact__table-opinion {
-    max-width: 340px; /* 最大幅を設定 */
-}
-
-.contact__table-btn {
-    padding: 0px 15px 0px 15px;
-    border: none;
-    border-radius: 3px;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-}
-
 /*--------------------------------------------------
-検索フォーム用
+検索フォーム(search.blade.php)
 --------------------------------------------------*/
 .form {
     margin: 0 auto;
@@ -180,6 +204,8 @@ body {
     width: 750px;
 }
 
+/* お名前、登録日
+----------------------------------------*/
 .form__input-area {
     display: flex;
     gap: 25px;
@@ -208,21 +234,23 @@ body {
     font-size: 80%;
 }
 
-.form__input--radio {
+/* 性別
+----------------------------------------*/
+.form__input-radio {
     padding: 10px 10px 10px 30px;
     text-align: left; /* テキストを右寄せ */
     margin: 0;
 }
 
-.form__input--radio label {
+.form__input-radio label {
     position: relative;
     cursor: pointer;
     padding-left: 35px;
     margin-right: 10px;
 }
 
-.form__input--radio label::before,
-.form__input--radio label::after {
+.form__input-radio label::before,
+.form__input-radio label::after {
     content: "";
     display: block;
     border-radius: 50%;
@@ -231,7 +259,7 @@ body {
     top: 50%;
 }
 
-.form__input--radio label::before {
+.form__input-radio label::before {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 50%;
@@ -240,7 +268,7 @@ body {
     left: 5px;
 }
 
-.form__input--radio label::after {
+.form__input-radio label::after {
     background-color: #000000;
     border-radius: 50%;
     opacity: 0;
@@ -249,12 +277,12 @@ body {
     left: 13px;
 }
 
-.form__input--radio input:checked + label::after {
+.form__input-radio input:checked + label::after {
     opacity: 1;
 }
 
 /* ラジオボタンを非表示にするスタイル */
-.radio-input {
+.form__input-radio-item {
     position: absolute;
     white-space: nowrap;
     border: 0;
@@ -267,12 +295,14 @@ body {
     padding: 0;
 }
 
-.form__input--text {
+/* メールアドレス
+----------------------------------------*/
+.form__input-text {
     display: flex;
     height: 50px;
 }
 
-.form__input--text input {
+.form__input-text input {
     padding: 10px;
     width: 290px;
     border: 1px solid #ddd;
@@ -281,17 +311,19 @@ body {
     appearance: none;
 }
 
-.form__input--text input {
+.form__input-text input {
     height: 40px;
 }
 
-.form__input--text label {
+.form__input-text label {
     padding: 10px;
     width: 600px;
     text-align: left; /* テキストを右寄せ */
     color: darkgrey;
 }
 
+/* フォームボタン、リセットリンク
+----------------------------------------*/
 .form__button {
     margin-top: 30px;
     display: flex;
