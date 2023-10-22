@@ -4,14 +4,14 @@
         {{-- 入力（お名前） --}}
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">お名前</span>
+                <span class="form__label-item">お名前</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input-area">
                     <input type="text" name="fullname" />
                     <div class="form__group">
                         <div class="form__group-title">
-                            <span class="form__label--item">性別</span>
+                            <span class="form__label-item">性別</span>
                         </div>
                         <div class="form__input-radio">
                             <input type="radio" class="form__input-radio-item" id="all" name="gender"
@@ -31,7 +31,7 @@
         {{-- 入力（登録日） --}}
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">登録日</span>
+                <span class="form__label-item">登録日</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input-date">
@@ -44,7 +44,7 @@
         {{-- 入力（メールアドレス） --}}
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">メールアドレス</span>
+                <span class="form__label-item">メールアドレス</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input-text">

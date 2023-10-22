@@ -14,7 +14,7 @@
             {{-- 表示（お名前） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">お名前</span>
+                    <span class="form__label-item">お名前</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-text">
@@ -25,7 +25,7 @@
             {{-- 表示（性別） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">性別</span>
+                    <span class="form__label-item">性別</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-text">
@@ -40,7 +40,7 @@
             {{-- 表示（メールアドレス） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">メールアドレス</span>
+                    <span class="form__label-item">メールアドレス</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-text">
@@ -51,7 +51,7 @@
             {{-- 表示（郵便番号） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">郵便番号</span>
+                    <span class="form__label-item">郵便番号</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-text">
@@ -62,7 +62,7 @@
             {{-- 表示（住所） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">住所</span>
+                    <span class="form__label-item">住所</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-text">
@@ -73,7 +73,7 @@
             {{-- 表示（建物名） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">建物名</span>
+                    <span class="form__label-item">建物名</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-text">
@@ -84,7 +84,7 @@
             {{-- 表示（ご意見） --}}
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">ご意見</span>
+                    <span class="form__label-item">ご意見</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input-textarea">
